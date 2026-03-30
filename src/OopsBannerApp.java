@@ -1,21 +1,22 @@
-class OopsBannerApp {
-    // print oops banner
-    public static void main(String[] args) 
-{
-        // Array to store 7 lines of banner
-        String[] lines = new String[7];
+public class OOPSBannerApp {
 
-        lines[0] = " ***     ***     *****    ***** ";
-        lines[1] = "*   *   *   *    *   *    *     ";
-        lines[2] = "*   *   *   *    *   *    *     ";
-        lines[3] = "*   *   *   *    *****    ***** ";
-        lines[4] = "*   *   *   *    *        *     ";
-        lines[5] = "*   *   *   *    *        *     ";
-        lines[6] = " ***     ***     *        ***** ";
+    public static void main(String[] args) {
 
-        // Print using for-each loop
+        // Inline initialization using String.join()
+        String[] lines = {
+            String.join("   ", " *** ", " *** ", " ***** ", " ***** "),
+            String.join("   ", "*   *", "*   *", "*   * ", "*     "),
+            String.join("   ", "*   *", "*   *", "*   * ", "*     "),
+            String.join("   ", "*   *", "*   *", "***** ", "***** "),
+            String.join("   ", "*   *", "*   *", "*     ", "*     "),
+            String.join("   ", "*   *", "*   *", "*     ", "*     "),
+            String.join("   ", " *** ", " *** ", "*     ", "***** ")
+        };
+
+        // For-each loop to print
         for (String line : lines) {
             System.out.println(line);
         }
     }
+}
 
